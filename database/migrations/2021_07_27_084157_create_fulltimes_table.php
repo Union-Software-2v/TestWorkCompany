@@ -15,8 +15,8 @@ class CreateFulltimesTable extends Migration
     {
         Schema::create('fulltimes', function (Blueprint $table) {
             $table->id();
-            $table->string('home');
-            $table->string('away');
+            $table->string('home')->nullable();
+            $table->string('away')->nullable();
             $table->timestamps();
         });
     }

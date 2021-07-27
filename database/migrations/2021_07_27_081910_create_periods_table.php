@@ -15,8 +15,8 @@ class CreatePeriodsTable extends Migration
     {
         Schema::create('periods', function (Blueprint $table) {
             $table->id();
-            $table->string('first');
-            $table->string('second');
+            $table->string('first')->nullable();
+            $table->string('second')->nullable();
             $table->unsignedBigInteger('fixtures_id')->nullable();
             $table->foreign('fixtures_id')->references('id')->on('fixtures')->onDelete('restrict');
             $table->timestamps();

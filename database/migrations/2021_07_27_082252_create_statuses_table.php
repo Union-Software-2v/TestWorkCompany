@@ -17,7 +17,7 @@ class CreateStatusesTable extends Migration
             $table->id();
             $table->string('long');
             $table->string('short');
-            $table->string('elapsed');
+            $table->string('elapsed')->nullable();
             $table->unsignedBigInteger('fixtures_id')->nullable();
             $table->foreign('fixtures_id')->references('id')->on('fixtures')->onDelete('restrict');
             $table->timestamps();

@@ -17,7 +17,7 @@ class CreateHomesTable extends Migration
             $table->id();
              $table->string('name');
              $table->string('logo');
-             $table->string('winner');
+             $table->string('winner')->nullable();
             $table->timestamps();
         });
     }
