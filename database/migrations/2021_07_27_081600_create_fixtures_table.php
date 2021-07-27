@@ -17,7 +17,7 @@ class CreateFixturesTable extends Migration
             $table->id();
             $table->string('referee')->nullable();
             $table->string('timezone');
-            $table->date('date');
+            $table->string('date');
             $table->string('timestamp');
             $table->timestamps();
         });
